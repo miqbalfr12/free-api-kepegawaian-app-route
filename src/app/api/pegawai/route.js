@@ -9,8 +9,8 @@ export async function GET() {
   statusText: "OK",
   headers: {
    "Cache-Control": "public, s-maxage=1",
-   "CDN-Cache-Control": "public, s-maxage=60",
-   "Vercel-CDN-Cache-Control": "public, s-maxage=3600",
+   "CDN-Cache-Control": "public, s-maxage=1",
+   "Vercel-CDN-Cache-Control": "public, s-maxage=1",
   },
  };
  return Response.json({...ResponseInit, message: data});
