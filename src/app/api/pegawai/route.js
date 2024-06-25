@@ -7,6 +7,11 @@ export async function GET() {
  const ResponseInit = {
   status: 200,
   statusText: "OK",
+  headers: {
+   "Cache-Control": "public, s-maxage=1",
+   "CDN-Cache-Control": "public, s-maxage=60",
+   "Vercel-CDN-Cache-Control": "public, s-maxage=3600",
+  },
  };
  return Response.json({...ResponseInit, message: data});
 }
