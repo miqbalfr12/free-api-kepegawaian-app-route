@@ -63,3 +63,9 @@ export async function updateData(collectiongName, id, data) {
  await updateDoc(docRef, data);
  return true;
 }
+
+export async function deleteData(collectiongName, id) {
+ const docRef = doc(firestore, collectiongName, id);
+ await deleteDoc(docRef);
+ return true;
+}

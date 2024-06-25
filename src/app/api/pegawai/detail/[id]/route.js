@@ -8,9 +8,8 @@ export async function GET(request, {params}) {
  kehadiran.map((kehadiran) => {
   delete kehadiran.pegawai;
  });
- console.log(kehadiran);
 
- data.kehadiran = kehadiran;
+ data.kehadiran = kehadiran.sort((a, b) => a.timestamp - b.timestamp);
  const ResponseInit = {status: 200, statusText: "OK"};
  return Response.json({...ResponseInit, message: data});
 }
