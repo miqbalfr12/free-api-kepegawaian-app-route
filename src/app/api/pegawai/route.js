@@ -5,9 +5,6 @@ export async function GET() {
  const ResponseInit = {
   status: 200,
   statusText: "OK",
-  headers: {
-   "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
-  },
  };
  return Response.json({...ResponseInit, message: data});
 }
